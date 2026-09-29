@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brandon Haley — Artist | Art, Photo/Video, Music, Web</title>
+  <meta name="description" content="Brandon Haley is a multi-disciplinary artist working across art and design, photo and video, music production and recording, and web and mobile development.">
+  <meta property="og:title" content="Brandon Haley — Artist | Art, Photo/Video, Music, Web">
+  <meta property="og:description" content="Brandon Haley is a multi-disciplinary artist working across art and design, photo and video, music production and recording, and web and mobile development.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="./">B.HALEY</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="./">Home</a></li>
+      <li><a href="art/">Art</a></li>
+      <li><a href="photo-video/">Photo / Video</a></li>
+      <li><a href="music/">Music / Recording</a></li>
+      <li><a href="web-mobile/">Web / Mobile</a></li>
+      <li><a href="#book">Book</a></li>
+    </ul>
+  </header>
+
+  <!-- ===== HERO: category flow ===== -->
+  <main class="hero">
+    <div class="hero__intro">
+      <h1 class="hero__name">Brandon<br>Haley</h1>
+      <div class="hero__sub mono">
+        <span>Artist</span><span>Art &amp; Design</span><span>Photo &amp; Video</span><span>Music Production &amp; Recording</span><span>Web / Mobile Code</span>
+      </div>
+    </div>
+    <nav class="panels" aria-label="Categories">
+      <a class="panel" data-cat="art" href="art/">
+        <span class="panel__num">01</span>
+        <div>
+          <h2 class="panel__title">Art</h2>
+          <ul class="panel__list"><li>Murals</li><li>Paintings</li><li>Physical Art</li><li>Street Art</li><li>Graphic Design</li><li>Personal Works</li></ul>
+          <span class="panel__go">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+      <a class="panel" data-cat="photo" href="photo-video/">
+        <span class="panel__num">02</span>
+        <div>
+          <h2 class="panel__title">Photo /<br>Video</h2>
+          <ul class="panel__list"><li>Music Videos</li><li>Cinema &amp; Short Films</li><li>Weddings</li><li>Sporting Events</li><li>Real Estate</li><li>Business &amp; Testimonials</li></ul>
+          <span class="panel__go">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+      <a class="panel" data-cat="music" href="music/">
+        <span class="panel__num">03</span>
+        <div>
+          <h2 class="panel__title">Music /<br>Recording</h2>
+          <ul class="panel__list"><li>Instrumentals</li><li>Vocal Recording</li><li>Mixing</li><li>Mastering</li><li>Live Performance</li></ul>
+          <span class="panel__go">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+      <a class="panel" data-cat="web" href="web-mobile/">
+        <span class="panel__num">04</span>
+        <div>
+          <h2 class="panel__title">Web /<br>Mobile</h2>
+          <ul class="panel__list"><li>Website Design</li><li>Web Games</li><li>Web Apps</li><li>Software Dev &amp; Testing</li><li>APIs</li><li>Server Support</li></ul>
+          <span class="panel__go">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about__portrait reveal">
+        <!-- Replace with: <img src="assets/img/portrait.jpg" alt="Brandon Haley"> -->
+        <div class="ph">Portrait</div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow mono">About</span>
+        <h2 class="h2">Artist first.<br>Every medium.</h2>
+        <p class="about__lead">For the last 15 years I've worked as an artist across just about every creative industry there is: on walls and canvas, behind the camera, in the studio, and inside the code that people tap and click every day.</p>
+        <p class="muted">My title in every one of those rooms has been the same. Whether the final result is a mural, a music video, a mastered track, a written piece or a web app, I approach it as an artist, with the finished experience as the center of focus. The tools change. The standard doesn't.</p>
+        <p class="muted">That range is the advantage. A brand shoot is sharper when the photographer also understands design. A website feels better when it's built by someone who thinks like a filmmaker about pacing. A record hits harder when the person mixing it also directs the video. Clients get one creative point of view carried all the way through, instead of a handful of vendors guessing at each other's intent.</p>
+        <p class="muted">I work with artists, small businesses, event hosts, couples, agencies and developers, on single projects and on long-term creative partnerships.</p>
+        <div class="stats">
+          <div class="stat"><b>15+</b><span class="mono muted">Years</span></div>
+          <div class="stat"><b>4</b><span class="mono muted">Disciplines</span></div>
+          <div class="stat"><b>1</b><span class="mono muted">Point of view</span></div>
+        </div>
+        <div class="mediums">
+          <span class="chip">Audio</span><span class="chip">Video</span><span class="chip">Visual</span><span class="chip">Literary</span><span class="chip">User Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED GALLERY ===== -->
+  <section class="section" id="work">
+    <div class="wrap" data-gallery>
+      <span class="eyebrow mono">Selected Work</span>
+      <h2 class="h2">Across the board</h2>
+      <div class="filters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="art">Art</button>
+          <button class="filter" data-filter="photo">Photo / Video</button>
+          <button class="filter" data-filter="music">Music / Recording</button>
+          <button class="filter" data-filter="web">Web / Mobile</button>
+      </div>
+      <div class="gallery">
+        <figure class="gallery__item wide" data-cat="art" data-title="Mural — Downtown Wall">
+          <div class="ph">Mural — Downtown Wall</div>
+          <figcaption><b>Mural — Downtown Wall</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="photo" data-title="Music Video Still">
+          <div class="ph">Music Video Still</div>
+          <figcaption><b>Music Video Still</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item tall" data-cat="music" data-title="Studio Session">
+          <div class="ph">Studio Session</div>
+          <figcaption><b>Studio Session</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="web" data-title="Web Game — Mobile">
+          <div class="ph">Web Game — Mobile</div>
+          <figcaption><b>Web Game — Mobile</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="art" data-title="Canvas Series">
+          <div class="ph">Canvas Series</div>
+          <figcaption><b>Canvas Series</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item wide" data-cat="photo" data-title="Wedding Film">
+          <div class="ph">Wedding Film</div>
+          <figcaption><b>Wedding Film</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="web" data-title="Web App Dashboard">
+          <div class="ph">Web App Dashboard</div>
+          <figcaption><b>Web App Dashboard</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+        <figure class="gallery__item" data-cat="music" data-title="Live Set">
+          <div class="ph">Live Set</div>
+          <figcaption><b>Live Set</b><span class="mono">Placeholder</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING (Calendly) ===== -->
+  <section class="section section--light" id="book">
+    <div class="wrap booking">
+      <div class="reveal">
+        <span class="eyebrow mono">Booking</span>
+        <h2 class="h2">Let's make<br>something.</h2>
+        <p class="muted">Pick a time for a call or appointment and tell me what you're working on. Every project starts with a conversation.</p>
+        <ul class="booking__types">
+          <li><span>Discovery call</span><span class="mono">15 min</span></li>
+          <li><span>Project consultation</span><span class="mono">30 min</span></li>
+          <li><span>Session / appointment booking</span><span class="mono">Varies</span></li>
+        </ul>
+      </div>
+      <div class="calendly-slot reveal">
+        <div class="calendly-placeholder">
+          <b>Scheduling opens soon</b>
+          <p class="muted">Online booking is being set up. Check back shortly to pick a time that works for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap mono">
+      <span>&copy; <span data-year></span> Brandon Haley</span>
+      <span><a href="https://github.com/BHALEYART" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="#book">Book a call</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
