@@ -37,12 +37,6 @@ const SITE = {
     panel.addEventListener("pointerleave", setOrigin);
   });
 
-  // Header video: respect reduced-motion settings
-  const heroVid = document.querySelector(".hero__bg");
-  if (heroVid && matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    heroVid.removeAttribute("autoplay"); heroVid.pause();
-  }
-
   // Hero name: panel-style color burst that fills the letters. Mouse enter on desktop, fast scroll on touch.
   const intro = document.querySelector(".hero__name");
   if (intro) {

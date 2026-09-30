@@ -101,19 +101,11 @@ a { color: inherit; }
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
+  padding-top: 72px;
 }
 .hero__intro {
-  position: relative; overflow: hidden; isolation: isolate;
-  padding: calc(72px + clamp(32px, 6vw, 72px)) var(--gutter) clamp(24px, 3vw, 40px); /* 72px clears the fixed nav */
+  padding: clamp(32px, 6vw, 72px) var(--gutter) clamp(24px, 3vw, 40px);
   border-bottom: 1px solid var(--line);
-}
-/* Background video behind the name */
-.hero__bg {
-  position: absolute; inset: 0; z-index: -1;
-  width: 100%; height: 100%; object-fit: cover;
-  opacity: 0.1;
-  filter: grayscale(1); /* keeps the black & white look; delete this line for full color */
-  pointer-events: none;
 }
 .hero__name {
   --splash: var(--c-art);
