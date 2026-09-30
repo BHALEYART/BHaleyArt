@@ -37,6 +37,50 @@ const SITE = {
     panel.addEventListener("pointerleave", setOrigin);
   });
 
+  // Hero name: panel-style color burst that fills the letters. Mouse enter on desktop, fast scroll on touch.
+  const intro = document.querySelector(".hero__name");
+  if (intro) {
+    intro.insertAdjacentHTML("beforeend", `<span class="hero__name-fill" aria-hidden="true">${intro.innerHTML}</span>`);
+    const colors = ["--c-art", "--c-photo", "--c-music", "--c-web"];
+    let ci = -1, idle = 0;
+    const setOrigin = (x, y) => {
+      const b = intro.getBoundingClientRect();
+      intro.style.setProperty("--x", `${((x - b.left) / b.width) * 100}%`);
+      intro.style.setProperty("--y", `${((y - b.top) / b.height) * 100}%`);
+    };
+    const splash = () => {
+      if (intro.classList.contains("is-splash")) return;
+      ci = (ci + 1) % colors.length;
+      intro.style.setProperty("--splash", `var(${colors[ci]})`);
+      intro.classList.add("is-splash");
+    };
+
+    intro.addEventListener("pointerenter", (e) => {
+      if (e.pointerType === "touch") return;
+      setOrigin(e.clientX, e.clientY); splash();
+    });
+    intro.addEventListener("pointerleave", (e) => {
+      if (e.pointerType === "touch") return;
+      setOrigin(e.clientX, e.clientY); intro.classList.remove("is-splash");
+    });
+
+    // Touch: a quick scroll bursts the color from a random point, then it recedes when scrolling stops
+    let lastY = scrollY, lastT = performance.now();
+    addEventListener("scroll", () => {
+      const now = performance.now(), v = Math.abs(scrollY - lastY) / Math.max(now - lastT, 1);
+      lastY = scrollY; lastT = now;
+      if (!matchMedia("(hover: none)").matches) return;
+      const b = intro.getBoundingClientRect();
+      if (b.bottom < 0 || b.top > innerHeight) return;
+      if (v > 0.6 && !intro.classList.contains("is-splash")) {
+        setOrigin(b.left + Math.random() * b.width, b.top + Math.random() * b.height);
+        splash();
+      }
+      clearTimeout(idle);
+      idle = setTimeout(() => intro.classList.remove("is-splash"), 450);
+    }, { passive: true });
+  }
+
   // Scroll reveal
   const io = "IntersectionObserver" in window
     ? new IntersectionObserver((entries) => {
